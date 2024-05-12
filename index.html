@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  
+  <!-- navbar -->
+  <nav class="navbar container-fluid">
+    <div class="navbar-navigation d-flex align-items-center">
+      <a href="#!" class="navbar-navigation__logo d-md-none d-flex">
+        <img src="images/logo.png" alt="">
+      </a>
+      <a href="#menu" data-bs-toggle="offcanvas" class="navbar-navigation__btn d-md-flex d-none flex-column justify-content-center">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+    <div class="navbar-contacts d-flex flex-md-column flex-row align-items-center justify-content-around">
+      <div class="navbar-contacts__phones d-flex flex-column align-items-center">
+        <h3>Наш телефон</h3>
+        <a href="#!">+996 705 188 955</a>
+        <a href="#!">+996 555 188 955</a>
+      </div>
+      <p class="navbar-contacts__time f300 icon-clock d-flex flex-md-row flex-column align-items-center">
+        <span>работаем</span>
+        <span>с 10:00 до 00:00</span>
+      </p>
+    </div>
+    <div class="navbar-info d-md-flex d-none justify-content-between align-items-center flex-grow-1">
+      <div class="navbar__info--location d-flex flex-column">
+        <p>Город:</p>
+        <h3>Бишкек</h3>
+      </div>
+      <div class="navbar__info--list d-flex align-items-center">
+        <a href="#!">Отзывы</a>
+        <a href="#!">Доставка и оплата</a>
+      </div>
+    </div>
+    <div class="navbar-icons d-flex align-items-center">
+      <a href="#cart" data-bs-toggle="offcanvas" class="f300 icon-cart d-md-flex d-none"></a>
+      <a href="#!" class="f300 icon-search"></a>
+    </div>
+  </nav>
+  <nav class="navbar-bottom fixed-bottom d-md-none d-flex justify-content-center align-items-center">
+    <a href="#menu" data-bs-toggle="offcanvas" class="navbar-bottom__link d-flex flex-column align-items-center">
+      <img src="images/icon-menu-bottom/icon1.svg" alt="">
+      <span>Меню</span>
+    </a>
+    <a href="#cart" data-bs-toggle="offcanvas" class="navbar-bottom__link d-flex flex-column align-items-center">
+      <img src="images/icon-menu-bottom/icon2.svg" alt="">
+      <span>Корзина</span>
+    </a>
+    <a href="#!" class="navbar-bottom__link d-flex flex-column align-items-center">
+      <img src="images/icon-menu-bottom/icon3.svg" alt="">
+      <span>Отзывы</span>
+    </a>
+  </nav>
+  <!-- canvas left -->
+  <div class="offcanvas offcanvas-start menu" id="menu">
+    <div class="offcanvas-header d-flex flex-column align-items-center">
+      <button type="button" class="btn-close align-self-end" data-bs-dismiss="offcanvas"></button>
+      <a href="#!" class="menu-logo d-flex flex-column align-items-center">
+        <img src="images/logo.png" alt="">
+        <span>romsem</span>
+      </a>
+    </div>
+    <div class="offcanvas-body d-flex justify-content-center">
+      <ul class="menu-list navbar-nav">
+        <li><a class="" href="#!"><img src="images/icon-menu/item1.svg" alt=""><span>Пицца</span></a></li>
+        <li><a class="" href="#!"><img src="images/icon-menu/item2.svg" alt=""><span>Сеты</span></a></li>
+        <li><a class="" href="#!"><img src="images/icon-menu/item3.svg" alt=""><span>WOK</span></a></li>
+        <li><a class="" href="#!"><img src="images/icon-menu/item4.svg" alt=""><span>Роллы</span></a></li>
+        <li><a class="" href="#!"><img src="images/icon-menu/item5.svg" alt=""><span>Суши</span></a></li>
+        <li><a class="soon" href="#!"><img src="images/icon-menu/item6.svg" alt=""><span>Салаты</span></a></li>
+        <li><a class="soon" href="#!"><img src="images/icon-menu/item7.svg" alt=""><span>Супы</span></a></li>
+        <li><a class="" href="#!"><img src="images/icon-menu/item8.svg" alt=""><span>Корн доги</span></a></li>
+        <li><a class="" href="#!"><img src="images/icon-menu/item9.svg" alt=""><span>Напитки</span></a></li>
+        <li><a class="" href="#!"><img src="images/icon-menu/item10.svg" alt=""><span>Акции</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- canvas left end -->
+  <!-- canvas right -->
+  <div class="offcanvas offcanvas-end" id="cart">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="cart-products d-flex flex-column align-items-center">
+        <h3 class="cart-products__title">Ваша корзина пуста.</h3>
+        <a href="#!" class="cart-products__add">Добавьте же скорее что-нибудь!</a>
+        <p class="cart-products__text">Бесплатная доставка от 800 СОМ</p>
+      </div>
+      <div class="cart-location d-flex flex-column align-items-center">
+        <div class="cart-location__map"></div>
+        <span class="f300 icon-marker"></span>
+        <h3 class="cart-location__title">Укажите адрес</h3>
+        <a href="#!" class="cart-location__time">И узнайте время доставки</a>
+      </div>
+    </div>
+  </div>
+  <!-- canvas right end -->
+  <!-- navbar end -->
+  
+  <!-- header-slider -->
+  <header class="header-slider container d-md-block d-none">
+    <div id="header-slider" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/sets/Rectangle1.png" alt="">
+          <div class="carousel-caption w-100 h-100 d-flex flex-column align-items-end justify-content-between end-0 start-0">
+            <div class="carousel-caption__text d-flex flex-column align-items-end">
+              <h2>Филадельфия и лосось сет</h2>
+              <p>1260 грамм, 36 кусочков</p>
+            </div>
+            <div class="carousel-caption__price d-flex flex-column align-items-end">
+              <span class="carousel-caption__price--old">1599 СОМ</span>
+              <span class="carousel-caption__price--new">599 СОМ</span>
+            </div>
+            <a href="#!" class="carousel-caption__btn">Хочу!</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/sets/Rectangle2.png" alt="">
+          <div class="carousel-caption w-100 h-100 d-flex flex-column align-items-end justify-content-between end-0 start-0">
+            <div class="carousel-caption__text d-flex flex-column align-items-end">
+              <h2>Филадельфия и лосось сет</h2>
+              <p>1260 грамм, 36 кусочков</p>
+            </div>
+            <div class="carousel-caption__price d-flex flex-column align-items-end">
+              <span class="carousel-caption__price--old">1599 СОМ</span>
+              <span class="carousel-caption__price--new">599 СОМ</span>
+            </div>
+            <a href="#!" class="carousel-caption__btn">Хочу!</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/sets/Rectangle3.png" alt="">
+          <div class="carousel-caption w-100 h-100 d-flex flex-column align-items-end justify-content-between end-0 start-0">
+            <div class="carousel-caption__text d-flex flex-column align-items-end">
+              <h2>Филадельфия и лосось сет</h2>
+              <p>1260 грамм, 36 кусочков</p>
+            </div>
+            <div class="carousel-caption__price d-flex flex-column align-items-end">
+              <span class="carousel-caption__price--old">1599 СОМ</span>
+              <span class="carousel-caption__price--new">599 СОМ</span>
+            </div>
+            <a href="#!" class="carousel-caption__btn">Хочу!</a>
+          </div>
+        </div>
+      </div>
+      <ul class="carousel-indicators">
+        <li data-bs-target="#header-slider" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#header-slider" data-bs-slide-to="1"></li>
+        <li data-bs-target="#header-slider" data-bs-slide-to="2"></li>
+      </ul>
+    </div>
+  </header>
+  <!-- header-slider end -->
+  
+  <!-- categories -->
+  <section class="categories container">
+    <div class="row categories__cards">
+      <div class="col-6 order-md-last categories-card">
+        <a href="#!" class="categories-card__link">
+          <img src="images/category/item1.jpg" alt="">
+          <p>Пицца</p>
+        </a>
+      </div>
+      <div class="col-6 d-md-none d-flex categories-card">
+        <a href="#!" class="categories-card__link">
+          <img src="images/category/item2.jpg" alt="">
+          <p>Сеты</p>
+        </a>
+      </div>
+      <div class="col-6 d-md-none d-flex categories-card">
+        <a href="#!" class="categories-card__link">
+          <img src="images/category/item3.jpg" alt="">
+          <p>WOK</p>
+        </a>
+      </div>
+      <div class="col-6 d-md-none d-flex categories-card">
+        <a href="#!" class="categories-card__link">
+          <img src="images/category/item4.jpg" alt="">
+          <p>Роллы</p>
+        </a>
+      </div>
+      <div class="col-6 d-md-none d-flex categories-card">
+        <a href="#!" class="categories-card__link">
+          <img src="images/category/item5.jpg" alt="">
+          <p>Суши</p>
+        </a>
+      </div>
+      <div class="col-6 d-md-none d-flex categories-card">
+        <a href="#!" class="categories-card__link">
+          <img src="images/category/item6.jpg" alt="">
+          <p>Супы</p>
+        </a>
+      </div>
+      <div class="col-6 d-md-none d-flex categories-card">
+        <a href="#!" class="categories-card__link">
+          <img src="images/category/item7.jpg" alt="">
+          <p>Салаты</p>
+        </a>
+      </div>
+      <div class="col-6 d-md-none d-flex categories-card">
+        <a href="#!" class="categories-card__link">
+          <img src="images/category/item8.jpg" alt="">
+          <p>Напитки</p>
+        </a>
+      </div>
+      <div class="col-12 d-md-none d-flex categories-card">
+        <a href="#!" class="categories-card__link">
+          <img src="images/category/item9.jpg" alt="">
+          <p>Комбо</p>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 categories-card">
+        <a href="#!" class="categories-card__link">
+          <img src="images/category/item10.jpg" alt="">
+          <p>С угрем</p>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 categories-card">
+        <a href="#!" class="categories-card__link">
+          <img src="images/category/item11.jpg" alt="">
+          <p>Корн дог</p>
+        </a>
+      </div>
+      <div class="col-12 col-md-6 order-md-first categories-card">
+        <a href="#!" class="categories-card__link">
+          <img src="images/category/item12.jpg" alt="">
+          <p>Чикен</p>
+        </a>
+      </div>
+      <div class="col-12 col-md-6 order-md-last categories-card">
+        <a href="#!" class="categories-card__link">
+          <img src="images/category/item13.jpg" alt="">
+          <p>Акции</p>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- categories end -->
+  
+  <!-- tabs -->
+  <section class="tabs d-md-flex flex-column d-none">
+    <div class="container">
+      <div class="nav tabs__links">
+        <a href="#link1" data-bs-toggle="tab" class="active">Новинки</a>
+        <a href="#link2" data-bs-toggle="tab">Популярное</a>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="link1">
+          <div id="products-new" class="carousel slide" data-bs-ride="carousel">
+            <div class="container">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row carousel-item__content">
+                    <div class="col-4">
+                      <div class="product-card d-flex flex-column justify-content-between">
+                        <img src="images/sets/Rectangle1.png" alt="" class="product-card__img">
+                        <div class="product-card__content flex-grow-1 d-flex flex-column justify-content-between">
+                          <div class="product-card__content--text flex-grow-1 d-flex justify-content-between flex-column">
+                            <h3>Филадельфия и лосось сет</h3>
+                            <p>1260 грамм, 36 кусочков</p>
+                          </div>
+                          <div class="product-card__content--price d-flex flex-md-column flex-lg-row align-items-center justify-content-around">
+                            <span>1150 СОМ</span>
+                            <a href="#!" class="product-card__btn">Хочу!</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="product-card d-flex flex-column justify-content-between">
+                        <img src="images/sets/Rectangle2.png" alt="" class="product-card__img">
+                        <div class="product-card__content flex-grow-1 d-flex flex-column justify-content-between">
+                          <div class="product-card__content--text flex-grow-1 d-flex justify-content-between flex-column">
+                            <h3>Филадельфия и лосось сет и лосось сет</h3>
+                            <p>1260 грамм, 36 кусочков</p>
+                          </div>
+                          <div class="product-card__content--price d-flex flex-md-column flex-lg-row align-items-center justify-content-around">
+                            <span>1150 СОМ</span>
+                            <a href="#!" class="product-card__btn">Хочу!</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="product-card d-flex flex-column justify-content-between">
+                        <img src="images/sets/Rectangle2.png" alt="" class="product-card__img">
+                        <div class="product-card__content flex-grow-1 d-flex flex-column justify-content-between">
+                          <div class="product-card__content--text flex-grow-1 d-flex justify-content-between flex-column">
+                            <h3>Филадельфия и лосось сет и лосось сет</h3>
+                            <p>1260 грамм, 36 кусочков</p>
+                          </div>
+                          <div class="product-card__content--price d-flex flex-md-column flex-lg-row align-items-center justify-content-around">
+                            <span>1150 СОМ</span>
+                            <a href="#!" class="product-card__btn">Хочу!</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row carousel-item__content">
+                    <div class="col-4">
+                      <div class="product-card d-flex flex-column justify-content-between">
+                        <img src="images/sets/Rectangle1.png" alt="" class="product-card__img">
+                        <div class="product-card__content flex-grow-1 d-flex flex-column justify-content-between">
+                          <div class="product-card__content--text flex-grow-1 d-flex justify-content-between flex-column">
+                            <h3>Филадельфия и лосось сет</h3>
+                            <p>1260 грамм, 36 кусочков</p>
+                          </div>
+                          <div class="product-card__content--price d-flex flex-md-column flex-lg-row align-items-center justify-content-around">
+                            <span>1150 СОМ</span>
+                            <a href="#!" class="product-card__btn">Хочу!</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="product-card d-flex flex-column justify-content-between">
+                        <img src="images/sets/Rectangle2.png" alt="" class="product-card__img">
+                        <div class="product-card__content flex-grow-1 d-flex flex-column justify-content-between">
+                          <div class="product-card__content--text flex-grow-1 d-flex justify-content-between flex-column">
+                            <h3>Филадельфия и лосось сет и лосось сет</h3>
+                            <p>1260 грамм, 36 кусочков</p>
+                          </div>
+                          <div class="product-card__content--price d-flex flex-md-column flex-lg-row align-items-center justify-content-around">
+                            <span>1150 СОМ</span>
+                            <a href="#!" class="product-card__btn">Хочу!</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="product-card d-flex flex-column justify-content-between">
+                        <img src="images/sets/Rectangle2.png" alt="" class="product-card__img">
+                        <div class="product-card__content flex-grow-1 d-flex flex-column justify-content-between">
+                          <div class="product-card__content--text flex-grow-1 d-flex justify-content-between flex-column">
+                            <h3>Филадельфия и лосось сет и лосось сет</h3>
+                            <p>1260 грамм, 36 кусочков</p>
+                          </div>
+                          <div class="product-card__content--price d-flex flex-md-column flex-lg-row align-items-center justify-content-around">
+                            <span>1150 СОМ</span>
+                            <a href="#!" class="product-card__btn">Хочу!</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev f300 icon-arr-left" data-bs-target="#products-new"  data-bs-slide="prev"></a>
+            <a class="carousel-control-next f300 icon-arr-right" data-bs-target="#products-new"  data-bs-slide="next"></a>
+          </div>
+        </div>
+        <div class="tab-pane fade show" id="link2">Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Строчка ему имеет, жаренные его залетают ручеек. Продолжил последний снова, страна возвращайся она пояс запятых он, маленькая дороге ведущими жизни языком гор залетают вопроса встретил безопасную, деревни рыбными лучше предупреждал единственное реторический все что? Букв текстами рекламных эта ведущими текстов вскоре подзаголовок выйти домах языкового великий. Точках щеке коварных пояс наш прямо сбить, рекламных, предупреждал, текстов даже за подпоясал буквенных возвращайся сих пор они безопасную? Переписывается маленький не сих ему языкового грамматики до все, всеми повстречался родного всемогущая которое знаках диких назад парадигматическая свое свою, страна, снова приставка встретил предложения?</div>
+      </div>
+    </div>
+  </section>
+  <!-- tabs end -->
+  
+  <!-- content -->
+  <section class="content container d-flex flex-column align-items-center">
+    <div class="content__text position-relative">
+      <h2>Заказать суши в Бишкеке</h2>
+      <p>Ресторан “Суши и Лапша” предлагаем своим клиентам самые вкусные суши с доставкой на дом, приготовленные по классическим и адаптированным к европейской аудитории рецептам, а также собственным наработкам наших поваров. Мы ценим время наших клиентов, поэтому вы можете заказать суши в Харькове с доставкой на дом или в офис.</p>
+      <p>В нашем меню более 20 видов суши:</p>
+      <ul>
+        <li>Классические с сырым лососем, тунцом, окунем.</li>
+        <li>Экзотические с тигровой креветкой, морским гребешком.</li>
+        <li>Пикантные с копченым лососем, угрем.</li>
+      </ul>
+      <p>В меню также представлены гунканы: с начинкой из красной икры и тобико, а также феликсы, где японский майонез сочетается с рыбой, морепродуктами, угрем. Любители острых блюд могут купить суши с соусом спайси. Популярные начинки — копченая курица, снежный краб, креветки, гребешки, тунец, лосось и окунь.</p>
+    </div>
+    <a href="#!" class="content__btn f300 icon-arr-down d-flex flex-row-reverse align-items-center">Подробнее</a>
+  </section>
+  <!-- content end -->
+  
+  <!-- footer -->
+  <footer class="footer container">
+    <div class="row">
+      <div class="col-md-4 footer-box d-md-flex d-none">
+        <ul class="footer-box__list navbar-nav">
+          <li><a href="#!">О компании</a></li>
+          <li><a href="#!">Доставка и оплата</a></li>
+          <li><a href="#!">Лента материалов</a></li>
+          <li><a href="#!">Политика возврата</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 footer-box">
+        <div class="footer-box__text">
+          <h3 class="d-md-flex d-none">Введите номер</h3>
+          <span class="footer-box__text--tel d-md-flex d-none">+996 (__) ___ __ __</span>
+          <p class="footer-box__text--p text-md-start text-center">Выберите удобный мессенджер для общения</p>
+          <ul class="footer-box__text--social navbar-nav flex-row justify-content-between">
+            <li><a href="#!" class="f400 icon-whatsapp"></a></li>
+            <li><a href="#!" class="f400 icon-telegram"></a></li>
+            <li><a href="#!" class="f400 icon-instagram"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 footer-box d-flex flex-column align-items-md-start align-items-center">
+        <a href="#!" class="footer-box__phone">Тел:+996 705 188 955</a>
+        <a href="#!" class="footer-box__phone">Тел:+996 555 188 955</a>
+        <p class="footer-box__address">Адрес:Бакаева 126</p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer end -->
+  
+  
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
